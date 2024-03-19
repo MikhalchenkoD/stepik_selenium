@@ -34,7 +34,6 @@ class ProductPage(BasePage):
         assert message_price == item_price, 'Цена не соответствует цене в сообщении'
 
     def should_not_be_success_message(self):
-        print('self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE)')
         assert self.is_not_element_present(*ProductPageLocators.PRICE_IN_MESSAGE), \
             "Success message is presented, but should not be"
 
